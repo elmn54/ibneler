@@ -1,0 +1,115 @@
+body {
+    font-family: sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f0f0f0;
+}
+
+.container {
+    text-align: center;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 1.2em;
+    cursor: pointer;
+    position: relative;
+}
+
+#timer {
+    position: absolute;
+    top: -80px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    font-size: 2em;
+    color: black;
+    pointer-events: none;
+    z-index: 10;
+}
+
+.button-container {
+    position: relative;
+    display: inline-block;
+}
+
+#trolImage {
+    margin-top: 20px;
+    max-width: 300px;
+    border: 1px solid #ccc;
+}
+
+#confetti-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+}
+
+.confetti {
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    animation: confetti-fall 3s linear forwards;
+    will-change: transform, opacity;
+    backface-visibility: hidden;
+}
+
+.confetti:nth-child(5n) {
+    width: 8px;
+    height: 8px;
+    animation-duration: 3.5s;
+}
+
+.confetti:nth-child(3n) {
+    width: 15px;
+    height: 15px;
+    animation-duration: 2.5s;
+}
+
+@keyframes confetti-fall {
+    0% {
+        transform: translateY(-10vh) rotate(0deg);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(110vh) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+.confetti:nth-child(2n) {
+    clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+}
+
+.confetti:nth-child(3n) {
+    clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+}
+
+.confetti:nth-child(7n) {
+    clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+}
+
+#trolImage {
+    margin-top: 20px;
+    max-width: 300px;
+    border: 1px solid #ccc;
+    animation: rotate-in 1s ease-in-out;
+}
+
+@keyframes rotate-in {
+    0% {
+        transform: rotate(-360deg);
+        opacity: 0;
+    }
+    100% {
+        transform: rotate(0deg);
+        opacity: 1;
+    }
+}
