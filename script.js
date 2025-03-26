@@ -3,7 +3,7 @@ const loadingMessage = document.getElementById('loadingMessage');
 const confettiContainer = document.getElementById('confetti-container');
 const trolImage = document.getElementById('trolImage');
 
-const images = ['bayram-deli.jpg', 'melih.jpg']; // Placeholder for images
+const images = ['1.jpg', '2.jpg', '3.jpg', '4.jpg', '5.jpg']; // Updated image references
 const timerDisplay = document.getElementById('timer');
 let timeLeft = 10;
 
